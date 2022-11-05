@@ -1,0 +1,295 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: content-box;
+}
+
+body{
+    background-image: url(/assets/background.jpg);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* --------------header------------------- */
+
+nav{
+    position: relative;
+    margin: 35px 670px ;
+    width: 590px;
+    height: 50px;
+    border-radius: 8px;
+    font-size: 0;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, .1);
+
+}   
+
+nav a{
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+
+}
+
+nav .animation{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background-color: rgba(245, 222, 179, 0.274);
+    border-radius: 8px;
+    transition: all .5s ease 0s;
+}
+
+a:nth-child(1){
+    width: 100px;
+}
+
+nav .start-login, a:nth-child(1):hover~.animation{
+    width: 100px;
+    left: 0;
+}
+
+a:nth-child(2){
+    width: 110px;
+}
+
+nav .start-about, a:nth-child(2):hover~.animation{
+    width: 110px;
+    left: 100px;
+}
+
+a:nth-child(3){
+    width: 100px;
+}
+
+nav .start-register, a:nth-child(3):hover~.animation{
+    width: 100px;
+    left: 210px;
+}
+
+a:nth-child(4){
+    width: 160px;
+}
+
+nav .start-services, a:nth-child(4):hover~.animation{
+    width: 160px;
+    left: 310px;
+}
+
+a:nth-child(5){
+    width: 120px;
+}
+
+nav .start-contact, a:nth-child(5):hover~.animation{
+    width: 120px;
+    left: 470px;
+}
+
+/* a:nth-child(6){
+    width: 100px;
+}
+
+nav .start-contact, a:nth-child(6):hover~.animation{
+    width: 120px;
+    left: 550px;
+} */
+
+/* --------------main login/register------------------- */
+.container1{
+    padding: 8em 25em;
+}
+
+
+.register form{
+    display: flex;
+    flex-direction: column;
+}
+
+.register form input{
+    margin: 0.5em 10em;
+    padding: 0.8em;
+    border-radius: 2em;
+    border: none;
+    background-color: rgba(127, 255, 212, 0.377);
+}
+
+::placeholder{
+    color: white;
+}
+
+.register form .submitt{
+    margin-top: 2em;
+    background-color: rgba(36, 65, 196, 0.664);
+    color: white;
+    cursor: pointer;
+}
+
+.moreOptions{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1em 4em;
+}
+.moreOptions a{
+    text-decoration: none;
+    color: white;
+}
+
+.moreOptions p{
+    font-size: 0.8em;
+
+}
+
+/* --------------main conversor------------------- */
+
+.container3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5em;
+}
+
+.container3 h1 {
+    color: white;
+    margin-bottom: 0.5em;
+
+  }
+  
+.container3 p {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.5em;
+  }
+ 
+   .btn {
+    color: #fff;
+    background: #4d9f3d83;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 12px;
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+  }
+
+  .currency {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+ 
+  .currency select {
+    padding: 10px 20px 10px 10px;
+    border: none;
+    font-size: 16px;
+    color: white;
+    background: rgba(62, 78, 150, 0.363);
+    font-weight: 500;
+  }
+  
+  .currency input {
+    border: none;
+    background-color: rgba(127, 255, 212, 0.377);
+    font-size: 30px;
+    text-align: right;
+    color: #fff;
+  }
+  
+  .swap-rate-container {
+    margin: 25px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+     .rate {
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+  }
+   
+/* --------------main index------------------- */
+
+
+main h2{
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.containerIndex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.containerIndex section{
+    background-color: rgba(92, 75, 75, 0.212);
+    margin: 4em;
+    padding-top: 5em;
+    /* padding: 1em; */
+    width: 30%;
+    text-align: center;
+    border-radius: 8px;
+
+}
+
+.containerIndex section h2{
+    font-weight: 600;
+}
+
+.containerIndex section p{
+    margin: 2.5em;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+/* --------------main prestamos------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------footer------------------- */
+
+footer{
+    padding: 4em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footItems{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5em;
+}
+
+.footItems li{
+    text-decoration: none;
+    list-style: none;
+}
+
+.footItems li a{
+    text-decoration: none;
+    color: white;
+
+}
+
+footer p{
+    color: white;
+}
