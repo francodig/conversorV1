@@ -3,11 +3,17 @@
 
 
 
-let usuariosRegistrados = []
+// let usuariosRegistrados = []
 
-fetch('../users.json')
-  .then(response => response.json())
-  .then(data => console.log(data));
+// fetch('../users.json')
+//   .then(response => response.json())
+//   .then(data => console.log(data));
+
+
+// let id = usuariosRegistrados.length + 1
+
+
+
 
 let userEmail = document.getElementById('emailLogin');
 let userPw = document.getElementById('passwordLogin');
@@ -40,6 +46,7 @@ function check(){
         localStorage.setItem('passwordLogin', userPw.value)
         window.location.href= "conversor.html";
         alert('Login successfuly ✅')
+        usuariosRegistrados.push(newUser)
 
 }
 }

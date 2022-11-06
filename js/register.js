@@ -12,6 +12,14 @@ function store(){
     let pw = document.getElementById('passwordNuevo');
     let email = document.getElementById('emailNuevo');
 
+
+//     let newUser = { 
+//     email: email, 
+//     password: pw, 
+//     nombre : name
+
+// } 
+
     if(email.value.length == 0){
         alert('Please fill in email');
 
