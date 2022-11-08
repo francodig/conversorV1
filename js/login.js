@@ -22,29 +22,45 @@ let formulario2 = document.getElementById("form2")
 formulario2.addEventListener("submit", check)
 
 //checking
-function check(){
+function check(event){
 
-
+    event.preventDefault()
 
     let valid_email = localStorage.getItem('emailNuevo')
     let valid_password = localStorage.getItem('passwordNuevo')
 
 
     if (userEmail.value === '' &&  userPw.value === '') {
-        alert('Data not valid ❌')
+        Swal.fire({
+            icon: 'error',
+            title: 'Error',
+            text: 'Data not valid!',
+            timer: 5000
+          })
         return false
     }
 
     if (valid_email != userEmail.value || valid_password != userPw.value)
     {
-        alert('Your account not found! Register Now!!')
+        Swal.fire({
+            icon: 'warning',
+            title: 'Warning',
+            text: 'Your account not found! Register Now!!',
+            timer: 5000
+          })
         return false
     } 
     else {
         localStorage.setItem('emailLogin', userEmail.value)
         localStorage.setItem('passwordLogin', userPw.value)
-        window.location.href= "conversor.html";
-        alert('Login successfuly ✅')
+        Swal.fire({
+            icon: 'success',
+            title: 'Welcome!',
+            text: 'Login successfuly!',
+            timer: 5000
+          })
+          setTimeout(() => window.location.href= "conversor.html", 4000);
+
         usuariosRegistrados.push(newUser)
 
 }

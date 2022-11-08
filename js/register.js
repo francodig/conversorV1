@@ -34,7 +34,6 @@ function store(event){
             timer: 5000
           })
           
-        // alert('Please fill in email');
 
     }else if(pw.value.length == 0){
         Swal.fire({
@@ -43,7 +42,6 @@ function store(event){
             text: 'Please fill in password!',
             timer: 5000
           })
-        // alert('Please fill in password');
 
     }else if(name.value.length == 0){
         Swal.fire({
@@ -52,7 +50,6 @@ function store(event){
             text: 'Please fill in User name!',
             timer: 5000
           })
-        // alert('Please fill in User name');
 
     }else if(name.value.length == 0 && pw.value.length == 0){
         Swal.fire({
@@ -61,7 +58,6 @@ function store(event){
             text: 'Please fill in email and password!',
             timer: 5000
           })
-        // alert('Please fill in email and password');
 
     }else if(pw.value.length < 6 || pw.value.length > 10){
         Swal.fire({
@@ -70,7 +66,6 @@ function store(event){
             text: 'Min of 6 and Max of 10 characters!',
             timer: 5000
           })
-        // alert('Min of 6 and Max of 10 characters');
 
     }else if(!pw.value.match(numbers)){
         Swal.fire({
@@ -79,7 +74,6 @@ function store(event){
             text: 'please add 1 number!',
             timer: 5000
           })
-        // alert('please add 1 number');
 
     }else if(!pw.value.match(upperCaseLetters)){
         Swal.fire({
@@ -88,7 +82,6 @@ function store(event){
             text: 'please add 1 uppercase letter!',
             timer: 5000
           })
-        // alert('please add 1 uppercase letter');
 
     }else if(!pw.value.match(lowerCaseLetters)){
         Swal.fire({
@@ -97,7 +90,6 @@ function store(event){
             text: 'please add 1 lowercase letter!',
             timer: 5000
           })
-        // alert('please add 1 lowercase letter');
 
     }else if(!pw.value.match(specialCharacters)){
         Swal.fire({
@@ -106,7 +98,6 @@ function store(event){
             text: 'please add 1 special character!',
             timer: 5000
           })
-        // alert('please add 1 special character');
 
     }else if(usuariosRegistrados.some(usuario => usuario.email == email.value )){
         Swal.fire({
@@ -115,20 +106,19 @@ function store(event){
             text: 'the email is already in use!',
             timer: 5000
           })
-        // alert('the email is already in use');
     
     }else{
         localStorage.setItem('userNuevo', name.value);
         localStorage.setItem('passwordNuevo', pw.value);
         localStorage.setItem('emailNuevo', email.value);
-        window.location.href= "login.html";
         Swal.fire({
             icon: 'success',
             title: 'Welcome!',
             text: 'Your account has been created!',
             timer: 5000
           })
-        // alert('Your account has been created');
+
+          setTimeout(() => window.location.href= "login.html", 4000);
     }
 }
 
