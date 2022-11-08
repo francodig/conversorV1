@@ -3,16 +3,13 @@
 
 
 
-// let usuariosRegistrados = []
+let usuariosRegistrados = []
 
-// fetch('../users.json')
-//   .then(response => response.json())
-//   .then(data => console.log(data));
-
-
-// let id = usuariosRegistrados.length + 1
-
-
+fetch('../users.json')
+.then(response => response.json())
+.then(data => {
+    usuariosRegistrados = data;
+});
 
 
 let userEmail = document.getElementById('emailLogin');
@@ -26,6 +23,8 @@ formulario2.addEventListener("submit", check)
 
 //checking
 function check(){
+
+
 
     let valid_email = localStorage.getItem('emailNuevo')
     let valid_password = localStorage.getItem('passwordNuevo')

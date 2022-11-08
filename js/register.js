@@ -7,21 +7,31 @@ let numbers = /[0-9]/g;
 let formulario = document.getElementById("form")
 formulario.addEventListener("submit", store)
 
+let usuariosRegistrados = []
+
+fetch('../users.json')
+.then(response => response.json())
+.then(data => {
+    usuariosRegistrados = data;
+});
+
+
 function store(){
     let name = document.getElementById('userNuevo');
     let pw = document.getElementById('passwordNuevo');
     let email = document.getElementById('emailNuevo');
 
 
-//     let newUser = { 
-//     email: email, 
-//     password: pw, 
-//     nombre : name
-
-// } 
 
     if(email.value.length == 0){
-        alert('Please fill in email');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please fill in email!',
+            timer: 10000
+          })
+          
+        // alert('Please fill in email');
 
     }else if(pw.value.length == 0){
         alert('Please fill in password');
@@ -47,6 +57,9 @@ function store(){
     }else if(!pw.value.match(specialCharacters)){
         alert('please add 1 special character');
 
+    }else if(usuariosRegistrados.some(usuario => usuario.email == email.value )){
+        alert('the email is already in use');
+    
     }else{
         localStorage.setItem('userNuevo', name.value);
         localStorage.setItem('passwordNuevo', pw.value);

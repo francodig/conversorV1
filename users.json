@@ -2,51 +2,61 @@
     {
       "id": 1,
       "nombre": "Franco",
-      "password": 123
+      "password": 123,
+      "email": "franco@hotmail.com"
     },
     {
       "id": 2,
       "nombre": "Gustavo",
-      "password": 456
+      "password": 456,
+      "email": "gustavo@hotmail.com"
     },
     {
         "id": 3,
         "nombre": "Sofia",
-        "password": 456
+        "password": 456,
+        "email": "sofia@hotmail.com"
       },
       {
         "id": 4,
         "nombre": "Mariano",
-        "password": 456
+        "password": 456, 
+        "email": "mariano@hotmail.com"
     },
     {
       "id": 5,
       "nombre": "Camila",
-      "password": 456
+      "password": 456, 
+      "email": "camila@hotmail.com"
     },
     {
       "id": 6,
       "nombre": "Victoria",
-      "password": 456
+      "password": 456, 
+      "email": "victoria@hotmail.com"
     },
     {
       "id": 7,
       "nombre": "Martin",
-      "password": 456
+      "password": 456, 
+      "email": "martin@hotmail.com"
     },
     {
       "id": 8,
       "nombre": "Guillermo",
-      "password": 456
+      "password": 456, 
+      "email": "guillermo@hotmail.com"
     },
     {
       "id": 9,
       "nombre": "Silvia",
-      "password": 456
+      "password": 456, 
+      "email": "silvia@hotmail.com"
     },
     {
       "id": 10,
       "nombre": "Adrian",
-      "password": 456
+      "password": 456, 
+      "email": "adrian@hotmail.com"
     }
   ]
