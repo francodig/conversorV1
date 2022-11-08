@@ -16,7 +16,10 @@ fetch('../users.json')
 });
 
 
-function store(){
+function store(event){
+
+    event.preventDefault()
+
     let name = document.getElementById('userNuevo');
     let pw = document.getElementById('passwordNuevo');
     let email = document.getElementById('emailNuevo');
@@ -25,47 +28,107 @@ function store(){
 
     if(email.value.length == 0){
         Swal.fire({
-            icon: 'error',
+            icon: 'info',
             title: 'Oops...',
             text: 'Please fill in email!',
-            timer: 10000
+            timer: 5000
           })
           
         // alert('Please fill in email');
 
     }else if(pw.value.length == 0){
-        alert('Please fill in password');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Please fill in password!',
+            timer: 5000
+          })
+        // alert('Please fill in password');
 
     }else if(name.value.length == 0){
-        alert('Please fill in User name');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Please fill in User name!',
+            timer: 5000
+          })
+        // alert('Please fill in User name');
 
     }else if(name.value.length == 0 && pw.value.length == 0){
-        alert('Please fill in email and password');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Please fill in email and password!',
+            timer: 5000
+          })
+        // alert('Please fill in email and password');
 
     }else if(pw.value.length < 6 || pw.value.length > 10){
-        alert('Min of 6 and Max of 10 characters');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'Min of 6 and Max of 10 characters!',
+            timer: 5000
+          })
+        // alert('Min of 6 and Max of 10 characters');
 
     }else if(!pw.value.match(numbers)){
-        alert('please add 1 number');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'please add 1 number!',
+            timer: 5000
+          })
+        // alert('please add 1 number');
 
     }else if(!pw.value.match(upperCaseLetters)){
-        alert('please add 1 uppercase letter');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'please add 1 uppercase letter!',
+            timer: 5000
+          })
+        // alert('please add 1 uppercase letter');
 
     }else if(!pw.value.match(lowerCaseLetters)){
-        alert('please add 1 lowercase letter');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'please add 1 lowercase letter!',
+            timer: 5000
+          })
+        // alert('please add 1 lowercase letter');
 
     }else if(!pw.value.match(specialCharacters)){
-        alert('please add 1 special character');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'please add 1 special character!',
+            timer: 5000
+          })
+        // alert('please add 1 special character');
 
     }else if(usuariosRegistrados.some(usuario => usuario.email == email.value )){
-        alert('the email is already in use');
+        Swal.fire({
+            icon: 'info',
+            title: 'Oops...',
+            text: 'the email is already in use!',
+            timer: 5000
+          })
+        // alert('the email is already in use');
     
     }else{
         localStorage.setItem('userNuevo', name.value);
         localStorage.setItem('passwordNuevo', pw.value);
         localStorage.setItem('emailNuevo', email.value);
         window.location.href= "login.html";
-        alert('Your account has been created');
+        Swal.fire({
+            icon: 'success',
+            title: 'Welcome!',
+            text: 'Your account has been created!',
+            timer: 5000
+          })
+        // alert('Your account has been created');
     }
 }
 
